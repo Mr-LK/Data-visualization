@@ -91,9 +91,87 @@
           </span>
         </li>
       </ul>
+      <div style="height:952px"></div>
+      <ul class="centerul">
+        <li v-for="item in bottomdata" :key="item.name" class="areanav">
+          <p>
+            {{ item.name }}
+          </p>
+          <span>
+            {{ item.name }}
+          </span>
+        </li>
+      </ul>
     </div>
     <div class="right">
-      
+      <div class="leftone">
+          <span style="color: #00FFFF;font-size: 16px">企业信息</span>
+          <div class="leftoneright">
+            <span>一企一档</span>
+          </div>
+          <div class="leftoneB" style="color: white; margin-top:20px; overflow:hidden">
+            <div class="rightoneBb">
+            </div>
+            <div class="leftoneBa">
+              <span>嘉兴海菱达精密传动科技有限公司</span><br><br>
+              <span>经营范围：自动化设备</span>
+            </div>
+          </div>
+      </div>
+      <div class="righttwo">
+        <div class="righttwoa">
+          <p style="color:#B8741A">2000万</p>
+          <span>营销收入</span>
+        </div>
+        <div style="border-left: 1px solid #797979;border-right: 1px solid #797979" class="righttwoa">
+          <p style="color:#B8741A">55万</p>
+          <span>税收</span>
+        </div>
+        <div class="righttwoa">
+          <p style="color:#68A809">优</p>
+          <span>健康指标</span>
+        </div>
+      </div>
+      <div class="rightthree">
+        <div>
+          <div style="width:15px;height:15px;background:#009DD9;border-radius:50%;float:left;margin-top: 3px;margin-right: 10px;"></div>
+          <span>上年度总产值：2.0256 排名 2</span>
+        </div>
+        <div style="margin-top:10px">
+          <div style="width:15px;height:15px;background:#009DD9;border-radius:50%;float:left;margin-top: 3px;margin-right: 10px;"></div>
+          <span>上月产值：整理中...</span>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="leftfouraa" style="width:100px;height:100px;margin-right:10px">
+          </div>
+          <div>
+            <span>本科及以上：25</span><br>
+            <span>高中：25</span><br>
+            <span>初中及以下：25</span><br>
+            <span>员工人数：25</span>
+          </div>
+        </div>
+      </div>
+      <div class="rightfour">
+        <span style="color: #00FFFF;font-size: 16px;display: block">核心团队</span>
+          <p style="height:10px"></p>
+          <div v-for="item in teamdata" :key="item.name" style="float:left;width:50%;margin-top:10px">
+            <div class="rightfourc">
+            </div>
+            <div class="rightfourb">
+              <span style="color:#8400FF">{{ item.name }}</span><br>
+              <span>{{ item.position }}</span><br>
+              <span>{{ item.phone }}</span>
+            </div>
+          </div>
+      </div>
+      <div class="rightfive">
+        <span style="color: #00FFFF;font-size: 16px;display: block">产能变化趋势</span>
+          <p style="height:10px"></p>
+          <div class="rightfivea">
+
+          </div>
+      </div>
     </div>
   </div>
 </template>
@@ -114,6 +192,17 @@ export default {
         { name: '建筑面积', area: '45万平方米' },
         { name: '数字楼宇', area: '8栋' },
         { name: '入园企业', area: '109家' }
+      ],
+      bottomdata: [
+        { name: '安防管理' },
+        { name: '消防管理' },
+        { name: '能耗管理' }
+      ],
+      teamdata: [
+        {name: '小龙女', position: '掌门', phone: '17342923379'},
+        {name: '风清扬', position: '祖师', phone: '18342943379'},
+        {name: '任我行', position: '掌门', phone: '15342963379'},
+        {name: '张无忌', position: '掌门', phone: '13342927379'},
       ]
     }
   }
@@ -121,10 +210,11 @@ export default {
 </script>
 <style scoped>
 .overview {
-  height: 100%;
+  /* height: 100%; */
   /* background-image:url("../assets/globalImg/bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; */
+  overflow: hidden;
   padding: 0 20px;
   padding-bottom:20px;
 }
@@ -149,7 +239,7 @@ export default {
   float: left;
 }
 .right {
-  width: 23%;
+  width: 25%;
   float: right;
 }
 .leftone {
@@ -265,12 +355,63 @@ export default {
 /* center */
 .centerul {
   display: flex;
-  padding: 20px 20px 20px 200px;
+  padding: 20px 20px 20px 88px;
 }
 .areanav {
   display: inline-block;
   color: white;
   flex: 1;
   line-height: 30px;
+}
+/* right */
+.rightoneBb {
+  margin-right: 10px;
+  float: left;
+  background: white;
+  width: 80px;
+  height: 80px
+}
+.righttwo {
+  margin-top: 20px;
+  display: flex;
+  color: white;
+  text-align: center;
+}
+.righttwo span {
+  font-size: 14px;
+}
+.righttwoa p{
+  font-size: 18px;
+}
+.righttwoa {
+  flex: 1;
+}
+.rightthree {
+  color: white;
+  margin-top: 20px;
+}
+.rightfour {
+  color: white;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.rightfourc {
+  width:77px;
+  height: 84px;
+  background: white;
+  float: left;
+  margin-right: 10px;
+}
+.rightfourb {
+  line-height: 30px;
+  font-size: 14px;
+}
+.rightfive {
+  margin-top: 20px;
+}
+.rightfivea {
+  width:100%;
+  height: 156px;
+  background: white;
 }
 </style>

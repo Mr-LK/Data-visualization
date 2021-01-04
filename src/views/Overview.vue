@@ -225,13 +225,13 @@ export default {
   margin-top: 10px;
 }
 .leftthreea {
-  width: 80%;
+  width: 78%;
   border: 1px solid #797979;
   padding: 20px 30px;
   overflow: hidden;
 }
 .lefttherraa {
-  width: 46%;
+  width: 45%;
   height: 110px;
   background: white;
   float: left;
@@ -240,7 +240,7 @@ export default {
   width: 100%;
 }
 .leftfouraa {
-  width: 45%;
+  width: 44%;
   height: 110px;
   background: white;
   float: left;

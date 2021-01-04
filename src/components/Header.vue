@@ -25,7 +25,9 @@ export default {
         routerList: [
             { name: '园区总览', path: '/overview' },
             { name: '企业产值', path: '/output-value' },
-            { name: '园区服务', path: '/service' }
+            { name: '园区服务', path: '/service' },
+            { name: '人行管理', path: '/pedestrian' },
+            { name: '车位管理', path: '/parking-space' }
         ],
         nowTime: moment().format("YYYY-MM-DD HH:mm:ss")
     };

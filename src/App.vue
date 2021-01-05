@@ -25,4 +25,7 @@ html,body,#app{
   background-size: 100% 100%;
   background-attachment: fixed;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 </style>

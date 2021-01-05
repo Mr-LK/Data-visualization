@@ -27,7 +27,8 @@ export default {
             { name: '企业产值', path: '/output-value' },
             { name: '园区服务', path: '/service' },
             { name: '人行管理', path: '/pedestrian' },
-            { name: '车位管理', path: '/parking-space' }
+            { name: '车位管理', path: '/parking-space' },
+            { name: '一企一档', path: '/enterprise' }
         ],
         nowTime: moment().format("YYYY-MM-DD HH:mm:ss")
     };
@@ -39,8 +40,8 @@ export default {
 </script>
 <style scoped>
 #nav {
-  float: left;
   width: 100%;
+  overflow: hidden;
 }
 .headertitle {
   background: url('../assets/globalImg/ldbg.png');

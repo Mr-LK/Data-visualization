@@ -93,11 +93,9 @@
       </ul>
       <div style="height:952px"></div>
       <ul class="centerul">
-        <li v-for="item in bottomdata" :key="item.name" class="areanav">
-          <p>
-            {{ item.name }}
-          </p>
-          <span>
+        <li v-for="item in bottomdata" :key="item.name" class="areanav" style="text-align:center">
+          <img :src="item.url" alt="">
+          <span style="display:block;margin:0 auto">
             {{ item.name }}
           </span>
         </li>
@@ -194,9 +192,9 @@ export default {
         { name: '入园企业', area: '109家' }
       ],
       bottomdata: [
-        { name: '安防管理' },
-        { name: '消防管理' },
-        { name: '能耗管理' }
+        { name: '安防管理', url: '/afico.png' },
+        { name: '消防管理', url: '/xfico.png' },
+        { name: '能耗管理', url: '/nhico.png' }
       ],
       teamdata: [
         {name: '小龙女', position: '掌门', phone: '17342923379'},
